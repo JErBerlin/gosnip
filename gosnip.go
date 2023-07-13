@@ -45,5 +45,5 @@ func BPrintd(d int, emojis ...rune) {
 	for _, emoji := range emojis {
 		fmt.Print(string(emoji) + " ") // print the emoji followed by a space
 	}
-	fmt.Printf("%d %s", d, "\033[0m") // print the int number and reset the text color to the default
+	fmt.Printf("%d %s\n", d, "\033[0m") // print the int number and reset the text color to the default
 }
