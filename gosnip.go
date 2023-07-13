@@ -38,3 +38,12 @@ func BPrintln(msg string, emojis ...rune) {
 	}
 	fmt.Println(msg, "\033[0m") // print the message and reset the text color to the default
 }
+
+// BPrintd prints a beautified int with optional emojis.
+func BPrintd(d int, emojis ...rune) {
+	fmt.Print("\n\033[1;34m") // start a new line and set the text color to bright blue
+	for _, emoji := range emojis {
+		fmt.Print(string(emoji) + " ") // print the emoji followed by a space
+	}
+	fmt.Printf("%d %s", d, "\033[0m") // print the int number and reset the text color to the default
+}
